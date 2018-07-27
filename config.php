@@ -1,0 +1,61 @@
+<?php
+/* This is a sample config file.
+ * Edit this file with your own settings and save it as "config.php"
+ *
+ * IMPORTANT: edit and save this file as plain ASCII text, using a text editor, for instance TextEdit on Mac OS or
+ * Notepad on Windows. Make sure there is no character before the opening <?php at the beginning of this file.
+ */
+ 
+/*
+ ** MySQL settings - You can get this info from your web host
+ */
+ 
+/** MySQL database username */
+define( 'YOURLS_DB_USER', 'login' );
+ 
+/** MySQL database password */
+define( 'YOURLS_DB_PASS', 'pass' );
+ 
+/** The name of the database for YOURLS */
+define( 'YOURLS_DB_NAME', 'dzeyourls' );
+ 
+/** MySQL hostname.
+ ** If using a non standard port, specify it like 'hostname:port', eg. 'localhost:9999' or '127.0.0.1:666' */
+define( 'YOURLS_DB_HOST', 'localhost' );
+ 
+/** MySQL tables prefix */
+define( 'YOURLS_DB_PREFIX', 'yourls_' );
+ 
+/*
+ ** Site options
+ */
+ 
+/** YOURLS installation URL -- all lowercase and with no trailing slash.
+ ** If you define it to "http://sho.rt", don't use "http://www.sho.rt" in your browser (and vice-versa) */
+define( 'YOURLS_SITE', 'https://dze.media/url/' );
+ 
+/** Server timezone GMT offset */
+define( 'YOURLS_HOURS_OFFSET', +6 ); 
+ 
+/** YOURLS language
+ ** Change this setting to use a translation file for your language, instead of the default English.
+ ** That translation file (a .mo file) must be installed in the user/language directory.
+ ** See http://yourls.org/translations for more information */
+define( 'YOURLS_LANG', 'ru_RU' ); 
+ 
+/** Allow multiple short URLs for a same long URL
+ ** Set to true to have only one pair of shortURL/longURL (default YOURLS behavior)
+ ** Set to false to allow multiple short URLs pointing to the same long URL (bit.ly behavior) */
+define( 'YOURLS_UNIQUE_URLS', true );
+ 
+/** Private means the Admin area will be protected with login/pass as defined below.
+ ** Set to false for public usage (eg on a restricted intranet or for test setups)
+ ** Read http://yourls.org/privatepublic for more details if you're unsure */
+define( 'YOURLS_PRIVATE', true );
+ 
+/** A random secret hash used to encrypt cookies. You don't have to remember it, make it long and complicated. Hint: copy from http://yourls.org/cookie **/
+define( 'YOURLS_COOKIEKEY', 'modify this text with something random' );
+ 
+/** Username(s) and password(s) allowed to access the site. Passwords either in plain text or as encrypted hashes
+commit:c0fdbb
+security
