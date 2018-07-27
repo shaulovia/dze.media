@@ -57,5 +57,38 @@ define( 'YOURLS_PRIVATE', true );
 define( 'YOURLS_COOKIEKEY', 'modify this text with something random' );
  
 /** Username(s) and password(s) allowed to access the site. Passwords either in plain text or as encrypted hashes
-commit:c0fdbb
-security
+ ** YOURLS will auto encrypt plain text passwords in this file
+ ** Read http://yourls.org/userpassword for more information */
+$yourls_user_passwords = array(
+  'login' => 'pass',
+  // 'username2' => 'password2',
+  // You can have one or more 'login'=>'password' lines
+  );
+ 
+/** Debug mode to output some internal information
+ ** Default is false for live site. Enable when coding or before submitting a new issue */
+define( 'YOURLS_DEBUG', false );
+  
+/*
+ ** URL Shortening settings
+ */
+ 
+/** URL shortening method: 36 or 62 */
+define( 'YOURLS_URL_CONVERT', 36 );
+/*
+ * 36: generates all lowercase keywords (ie: 13jkm)
+ * 62: generates mixed case keywords (ie: 13jKm or 13JKm)
+ * Stick to one setting. It's best not to change after you've started creating links.
+ */
+ 
+/** 
+* Reserved keywords (so that generated URLs won't match them)
+* Define here negative, unwanted or potentially misleading keywords.
+*/
+$yourls_reserved_URL = array(
+  'porn', 'faggot', 'sex', 'nigger', 'fuck', 'cunt', 'dick',
+);
+ 
+/*
+ ** Personal settings would go after here.
+ */
